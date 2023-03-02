@@ -11,4 +11,8 @@
     <string name="b_com">B.Com</string>
     <string name="bca">Bca</string>
     <string name="bba">Bba</string>
+    <string name="designation">Designation</string>
+    <string name="agreement">Agreement</string>
+    <string name="i_have_read_and_accept_the">I Have Read and Accept the</string>
+    <string name="password">Password</string>
 </resources>

@@ -14,6 +14,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
         android:orientation="vertical">
 
         <TextView
@@ -34,7 +36,7 @@
             android:importantForAutofill="no"
             android:paddingStart="18dp"
             android:paddingEnd="18dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="22dp"
             android:background="@drawable/backgroundedt"/>
 
         <EditText
@@ -46,13 +48,14 @@
             android:importantForAutofill="no"
             android:paddingStart="18dp"
             android:paddingEnd="18dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             android:background="@drawable/backgroundedt"/>
 
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                android:layout_marginTop="5dp"
                 android:orientation="horizontal">
 
                 <com.google.android.material.radiobutton.MaterialRadioButton
@@ -60,6 +63,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/male"
                     android:textStyle="bold"
+                    android:buttonTint="@color/Primary_color"
                     android:paddingStart="0dp"
                     android:paddingEnd="20dp"
                     android:textColor="@color/Primary_color" />
@@ -69,6 +73,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/female"
                     android:textStyle="bold"
+                    android:buttonTint="@color/Primary_color"
                     android:textColor="@color/Primary_color"/>
 
             </RadioGroup>
@@ -76,7 +81,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
             android:orientation="horizontal">
 
             <EditText
@@ -113,12 +118,13 @@
             android:importantForAutofill="no"
             android:paddingStart="18dp"
             android:paddingEnd="18dp"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="15dp"
             android:background="@drawable/backgroundedt"/>
 
         <RadioGroup
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -127,6 +133,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/b_com"
                 android:textStyle="bold"
+                android:buttonTint="@color/Primary_color"
                 android:paddingStart="0dp"
                 android:paddingEnd="20dp"
                 android:textColor="@color/Primary_color" />
@@ -136,6 +143,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/bca"
                 android:textStyle="bold"
+                android:buttonTint="@color/Primary_color"
                 android:paddingStart="0dp"
                 android:paddingEnd="20dp"
                 android:textColor="@color/Primary_color"/>
@@ -144,6 +152,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/bba"
+                android:buttonTint="@color/Primary_color"
                 android:textStyle="bold"
                 android:textColor="@color/Primary_color"/>
 
@@ -151,27 +160,72 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:orientation="horizontal"
-            android:paddingStart="12dp"
-            android:paddingEnd="12dp"
-            android:layout_marginTop="12dp">
+            android:layout_marginTop="5dp">
 
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Designation : "
+                android:text="@string/designation"
+                android:layout_gravity="center"
                 android:textStyle="bold"
                 android:textColor="@color/Primary_color"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
                 android:textSize="20sp"/>
 
             <Spinner
                 android:id="@+id/spin1"
+                android:layout_gravity="center"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAlignment="center" />
+                android:layout_height="40dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:textAlignment="center"
+                android:background="@drawable/spin_theme"/>
 
         </LinearLayout>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="@string/password"
+            android:textColor="@color/Primary_color"
+            android:inputType="textPassword"
+            android:importantForAutofill="no"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/backgroundedt"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="12dp"
+            android:paddingEnd="0dp"
+            android:layout_marginTop="5dp">
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                app:buttonTint="@color/Primary_color"
+                android:text="@string/i_have_read_and_accept_the"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/hyperLink"
+                android:text="@string/agreement"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textSize="15sp"
+                android:paddingStart="7dp"
+                android:paddingEnd="7dp"
+                android:textColor="@color/Primary_color"/>
+
+        </LinearLayout>
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/BtnSubmit"
             android:layout_width="130dp"
@@ -179,7 +233,8 @@
             android:text="@string/submit"
             android:textStyle="bold"
             android:textColor="@color/white"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="17dp"
             app:cornerRadius="11dp"/>
+
     </LinearLayout>
 </ScrollView>
