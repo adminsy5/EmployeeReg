@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    android:overScrollMode="never"
+    android:padding="22dp"
+    android:clipToPadding="false"
+    tools:context=".SignUpEmp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/employee_registration"
+            android:layout_marginTop="10dp"
+            android:textSize="22sp"
+            android:textColor="@color/Primary_color"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="@string/employee_name"
+            android:textColor="@color/Primary_color"
+            android:inputType="textPersonName"
+            android:importantForAutofill="no"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/backgroundedt"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="@string/email"
+            android:textColor="@color/Primary_color"
+            android:inputType="textEmailAddress"
+            android:importantForAutofill="no"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/backgroundedt"/>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/male"
+                    android:textStyle="bold"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="20dp"
+                    android:textColor="@color/Primary_color" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/female"
+                    android:textStyle="bold"
+                    android:textColor="@color/Primary_color"/>
+
+            </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/EmpJoinDate"
+                android:layout_width="170dp"
+                android:layout_height="50dp"
+                android:hint="@string/joining_date"
+                android:textColor="@color/Primary_color"
+                android:inputType="date"
+                android:importantForAutofill="no"
+                android:paddingStart="18dp"
+                android:paddingEnd="18dp"
+                android:background="@drawable/backgroundedt"/>
+
+            <ImageView
+                android:id="@+id/imgCal"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:src="@drawable/my_calendar"
+                app:tint="@color/Primary_color"
+                android:layout_gravity="center"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:importantForAccessibility="no" />
+
+        </LinearLayout>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="@string/phone_number"
+            android:textColor="@color/Primary_color"
+            android:inputType="number"
+            android:importantForAutofill="no"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/backgroundedt"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/b_com"
+                android:textStyle="bold"
+                android:paddingStart="0dp"
+                android:paddingEnd="20dp"
+                android:textColor="@color/Primary_color" />
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bca"
+                android:textStyle="bold"
+                android:paddingStart="0dp"
+                android:paddingEnd="20dp"
+                android:textColor="@color/Primary_color"/>
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bba"
+                android:textStyle="bold"
+                android:textColor="@color/Primary_color"/>
+
+        </RadioGroup>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="130dp"
+            android:layout_height="55dp"
+            android:text="@string/submit"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            app:cornerRadius="11dp"/>
+    </LinearLayout>
+</ScrollView>
