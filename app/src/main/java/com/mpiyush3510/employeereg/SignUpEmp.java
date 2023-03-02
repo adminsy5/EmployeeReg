@@ -14,25 +14,13 @@ import com.mpiyush3510.employeereg.databinding.ActivitySignUpEmpBinding;
 
 public class SignUpEmp extends AppCompatActivity {
 ActivitySignUpEmpBinding binding;
-String[] frnds={"Rdx","Mpiyu","Ak"};
+String[] Designation={"Developer","Engineer"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivitySignUpEmpBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
         AdminListeners();
-        binding.BtnSubmit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-
-            }
-        });
-        ArrayAdapter arrayAdapter=new ArrayAdapter(this,android.R.layout.simple_spinner_item,frnds);
-        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        binding.spin1.setAdapter(arrayAdapter);
-
         binding.hyperLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -41,6 +29,17 @@ String[] frnds={"Rdx","Mpiyu","Ak"};
                 startActivity(intent);
             }
         });
+        binding.BtnSubmit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+            }
+        });
+        // ArrayAdapter<String> arrayAdapter1=new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,Designation);
+        ArrayAdapter<String> arrayAdapter= new ArrayAdapter<String>(this,R.layout.spinner_item,Designation);
+        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        binding.spin1.setAdapter(arrayAdapter);
     }
     private void AdminListeners(){
         DatePicker();
