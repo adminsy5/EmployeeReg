@@ -28,6 +28,7 @@
             android:textStyle="bold"/>
 
         <EditText
+            android:id="@+id/EmpEditName"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:hint="@string/employee_name"
@@ -40,6 +41,7 @@
             android:background="@drawable/backgroundedt"/>
 
         <EditText
+            android:id="@+id/EmpEditEmail"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:hint="@string/email"
@@ -59,6 +61,7 @@
                 android:orientation="horizontal">
 
                 <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/empEditmale"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/male"
@@ -69,6 +72,7 @@
                     android:textColor="@color/Primary_color" />
 
                 <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/empEditFemale"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/female"
@@ -110,6 +114,7 @@
         </LinearLayout>
 
         <EditText
+            android:id="@+id/EmpEditMno"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:hint="@string/phone_number"
@@ -129,6 +134,7 @@
             android:orientation="horizontal">
 
             <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/empEditBcom"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/b_com"
@@ -139,6 +145,7 @@
                 android:textColor="@color/Primary_color" />
 
             <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/empEditBca"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/bca"
@@ -149,6 +156,7 @@
                 android:textColor="@color/Primary_color"/>
 
             <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/empEditBba"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/bba"
@@ -165,6 +173,7 @@
             android:layout_marginTop="5dp">
 
             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/EmpTextDesignation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/designation"
@@ -188,6 +197,7 @@
         </LinearLayout>
 
         <EditText
+            android:id="@+id/EmpEditPasswd"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:hint="@string/password"
@@ -208,6 +218,7 @@
             android:layout_marginTop="5dp">
 
             <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/EmpCheckTerms"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="15sp"
