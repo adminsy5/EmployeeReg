@@ -1,6 +1,5 @@
-package com.mpiyush3510.employeereg;
+package com.mpiyush3510.employeereg.Activity;
 
-import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
@@ -8,12 +7,17 @@ import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.material.datepicker.MaterialDatePicker;
 import com.google.android.material.datepicker.MaterialPickerOnPositiveButtonClickListener;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+import com.mpiyush3510.employeereg.R;
 import com.mpiyush3510.employeereg.databinding.ActivitySignUpEmpBinding;
 
 public class SignUpEmp extends AppCompatActivity {
@@ -37,12 +41,12 @@ String[] Designation={"Developer","Engineer"};
             @Override
             public void onClick(View v) {
                 if(checkValidation()){
-                    //Toast.makeText(SignUpEmp.this, "Very Good", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignUpEmp.this, "Sign Up Successfully", Toast.LENGTH_SHORT).show();
+                    showExplicitData();
                 }
             }
         });
-        // ArrayAdapter<String> arrayAdapter1=new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,Designation);
-        ArrayAdapter<String> arrayAdapter= new ArrayAdapter<String>(this,R.layout.spinner_item,Designation);
+        ArrayAdapter<String> arrayAdapter= new ArrayAdapter<String>(this, R.layout.spinner_item,Designation);
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         binding.spin1.setAdapter(arrayAdapter);
     }
@@ -109,12 +113,24 @@ String[] Designation={"Developer","Engineer"};
         }else if (!binding.EmpCheckTerms.isChecked()){
             showToast("Please accept terms & Condition !");
             return false;
-    }else{
-            showToast("Good");
         }
         return true;
     }
 
+    private void showExplicitData(){
+        String gender=((RadioButton)findViewById(binding.rdgGender.getCheckedRadioButtonId())).getText().toString();
+        String course=((RadioButton)findViewById(binding.rdgCourse.getCheckedRadioButtonId())).getText().toString();
+
+        Intent ig=new Intent(SignUpEmp.this, MainActivity.class);
+        ig.putExtra("empName",binding.EmpEditName.getText().toString());
+        ig.putExtra("empEmail",binding.EmpEditEmail.getText().toString());
+        ig.putExtra("empGender",gender);
+        ig.putExtra("empCourse",course);
+        ig.putExtra("empJdate",binding.EmpJoinDate.getText().toString());
+        ig.putExtra("empMno",binding.EmpEditMno.getText().toString());
+        ig.putExtra("empDesignation",binding.spin1.getSelectedItem().toString());
+        startActivity(ig);
+    }
     private void custAlert(){
         MaterialAlertDialogBuilder builder=new MaterialAlertDialogBuilder(this)
                 .setTitle("Error")

@@ -16,4 +16,20 @@
     <string name="i_have_read_and_accept_the">I Have Read and Accept the</string>
     <string name="password">Password</string>
     <string name="dialogue_mess">Can not Add Your Personal details in Password !</string>
+    <string name="employee_info">Employee Info</string>
+    <string name="empname">EmpName :</string>
+    <string name="employee_namex">Employee Name</string>
+    <string name="empemail">EmpEmail :</string>
+    <string name="empgender">EmpGender :</string>
+    <string name="empjdate">EmpJdate :</string>
+    <string name="empmno">EmpMno :</string>
+    <string name="empcourse">EmpCourse :</string>
+    <string name="empdesignation">EmpDesignation :</string>
+    <string name="employee_emailx">Employee Email</string>
+    <string name="employee_genderx">Employee Gender</string>
+    <string name="employee_join_datex">Employee Join Date</string>
+    <string name="employee_mobile_nox">Employee Mobile No</string>
+    <string name="employee_coursex">Employee Course</string>
+    <string name="employee_designationx">Employee Designation</string>
+    <string name="get_data">Get Data</string>
 </resources>
