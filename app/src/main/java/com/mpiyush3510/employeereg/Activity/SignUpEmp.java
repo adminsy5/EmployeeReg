@@ -8,8 +8,6 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
-import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,17 +15,20 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.datepicker.MaterialDatePicker;
 import com.google.android.material.datepicker.MaterialPickerOnPositiveButtonClickListener;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+import com.mpiyush3510.employeereg.DbHelper;
 import com.mpiyush3510.employeereg.R;
 import com.mpiyush3510.employeereg.databinding.ActivitySignUpEmpBinding;
 
 public class SignUpEmp extends AppCompatActivity {
 ActivitySignUpEmpBinding binding;
+DbHelper db;
 String[] Designation={"Developer","Engineer"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivitySignUpEmpBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        db=new DbHelper(this);
         AdminListeners();
         binding.hyperLink.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,11 +42,11 @@ String[] Designation={"Developer","Engineer"};
             @Override
             public void onClick(View v) {
                 if(checkValidation()){
-                    Toast.makeText(SignUpEmp.this, "Sign Up Successfully", Toast.LENGTH_SHORT).show();
-                    showExplicitData();
+                    signUp();
                 }
             }
         });
+
         ArrayAdapter<String> arrayAdapter= new ArrayAdapter<String>(this, R.layout.spinner_item,Designation);
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         binding.spin1.setAdapter(arrayAdapter);
@@ -72,7 +73,20 @@ String[] Designation={"Developer","Engineer"};
             }
         });
     }
-
+    private void signUp() {
+        String email=binding.EmpEditEmail.getText().toString();
+        String password=binding.EmpEditPasswd.getText().toString();
+        boolean checkEmail=db.checkEmail(email);
+        if(!checkEmail){
+            boolean insert=db.insertData(email,password);
+            if(insert){
+                Toast.makeText(SignUpEmp.this, "Sign Up Successfully", Toast.LENGTH_SHORT).show();
+                showExplicitData();
+            }else
+                showToast("Can't Sign Up");
+        }else
+            showToast("You Have Already Account ! Sign In Please👍");
+    }
     private void showToast(String message){
         Toast.makeText(getApplicationContext(),message,Toast.LENGTH_SHORT).show();
     }

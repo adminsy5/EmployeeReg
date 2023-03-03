@@ -12,20 +12,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EmployeeReg"
         tools:targetApi="31">
-
+        <activity
+            android:name=".Activity.SignInEmp"
+            android:exported="false" />
         <activity
             android:name=".Activity.SignUpEmp"
             android:exported="true"
             android:windowSoftInputMode="adjustResize">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-        </activity>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".Activity.MainActivity"
-            android:exported="true"/>
+            android:exported="true" />
     </application>
 
 </manifest>
