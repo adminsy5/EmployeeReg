@@ -63,7 +63,7 @@ String[] Designation={"Developer","Engineer"};
                     }
                 };
                 Handler handler=new Handler();
-                handler.postDelayed(runnable,5000);
+                handler.postDelayed(runnable,1500);
             }
         });
     }
