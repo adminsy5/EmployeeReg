@@ -14,14 +14,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:layout_gravity="center"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="150dp"
         android:orientation="vertical">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/employee_registration"
+            android:text="@string/employee_login"
             android:layout_marginTop="10dp"
             android:textSize="22sp"
             android:textColor="@color/Primary_color"
@@ -54,10 +53,10 @@
             android:background="@drawable/backgroundedt"/>
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/BtnSubmit"
+            android:id="@+id/BtnSignIn"
             android:layout_width="130dp"
             android:layout_height="55dp"
-            android:text="@string/submit"
+            android:text="@string/sign_in"
             android:textStyle="bold"
             android:textColor="@color/white"
             android:layout_marginTop="27dp"

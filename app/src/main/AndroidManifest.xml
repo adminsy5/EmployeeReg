@@ -13,6 +13,9 @@
         android:theme="@style/Theme.EmployeeReg"
         tools:targetApi="31">
         <activity
+            android:name=".EmployeeList"
+            android:exported="false" />
+        <activity
             android:name=".Activity.SignInEmp"
             android:exported="false" />
         <activity

@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:layout_gravity="center"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="0dp"
         android:orientation="vertical">
 
         <TextView
@@ -249,6 +249,15 @@
             android:layout_marginTop="17dp"
             app:cornerRadius="11dp"/>
 
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/SignInText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_in_here"
+            android:textStyle="bold"
+            android:textColor="@color/Primary_color"
+            android:textSize="16sp"
+            android:layout_marginTop="12dp"/>
     </LinearLayout>
 
 </ScrollView>

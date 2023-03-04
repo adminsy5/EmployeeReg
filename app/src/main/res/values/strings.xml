@@ -31,5 +31,8 @@
     <string name="employee_mobile_nox">Employee Mobile No</string>
     <string name="employee_coursex">Employee Course</string>
     <string name="employee_designationx">Employee Designation</string>
-    <string name="get_data">Get Data</string>
+    <string name="want_to_sign_in">Want to Sign In ?</string>
+    <string name="employee_login">Employee Login</string>
+    <string name="sign_in_here">Sign in Here</string>
+    <string name="sign_in">Sign IN</string>
 </resources>

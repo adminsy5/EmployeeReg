@@ -4,6 +4,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -50,6 +51,33 @@ String[] Designation={"Developer","Engineer"};
         ArrayAdapter<String> arrayAdapter= new ArrayAdapter<String>(this, R.layout.spinner_item,Designation);
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         binding.spin1.setAdapter(arrayAdapter);
+        binding.SignInText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent ig = new Intent(SignUpEmp.this, SignInEmp.class);
+                custAlert1();
+                Runnable runnable= new Runnable() {
+                    @Override
+                    public void run() {
+                        startActivity(ig);
+                    }
+                };
+                Handler handler=new Handler();
+                handler.postDelayed(runnable,5000);
+            }
+        });
+    }
+    private void custAlert1(){
+        MaterialAlertDialogBuilder builder= new MaterialAlertDialogBuilder(this)
+                .setTitle("User Notice")
+                .setMessage("Before sign In you need to Sign Up in Application, If you Already Sign up in App then forgot this message")
+                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+        builder.create().show();
     }
     private void AdminListeners(){
         DatePicker();

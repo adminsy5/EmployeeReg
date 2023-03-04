@@ -222,15 +222,15 @@
         </LinearLayout>
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/BtnGetData"
+            android:id="@+id/BtnWantSignIn"
             android:layout_marginTop="22dp"
-            android:layout_width="160dp"
+            android:layout_width="180dp"
             android:layout_height="55dp"
             android:textColor="@color/white"
             app:cornerRadius="12dp"
             android:backgroundTint="@color/Primary_color"
-            android:text="@string/get_data"
-
+            android:text="@string/want_to_sign_in"
             android:textStyle="bold"/>
     </LinearLayout>
+
 </ScrollView>
